@@ -20,9 +20,9 @@ const paths = {
   contacts: resolve(dataRoot, 'contacts.json')
 };
 const initialProducts = [
-  { id: 'nhie', name: 'Never Have I Ever', category: 'Never Have I Ever', description: 'A slightly chaotic game for finding out what your friends have really been up to.', tagline: 'A conversation starter for your next hangout.', prompt: 'LIED ABOUT MY AGE', color: '#c9eafb', price: null, stock: 0, available: false },
-  { id: 'tod', name: 'Truth or Dare', category: 'Truth or Dare', description: 'Questions, challenges, and unexpected moments for your next hangout.', tagline: 'Questions, challenges, unexpected moments.', prompt: 'TRUTH OR DARE', color: '#ded3f3', price: null, stock: 0, available: false },
-  { id: 'bb', name: 'Bestie Bucketlist', category: 'Bestie Bucketlist', description: 'A collection of activities and memories to make with your favourite people.', tagline: 'One Pinky Promise at a Time.', prompt: 'ONE PINKY PROMISE AT A TIME', color: '#f8d8e4', price: null, stock: 0, available: false }
+  { id: 'nhie', name: 'Never Have I Ever', category: 'Never Have I Ever', description: 'A slightly chaotic game for finding out what your friends have really been up to.', tagline: 'A conversation starter for your next hangout.', prompt: 'LIED ABOUT MY AGE', color: '#c9eafb', price: 499, stock: 0, available: false },
+  { id: 'tod', name: 'Truth or Dare', category: 'Truth or Dare', description: 'Questions, challenges, and unexpected moments for your next hangout.', tagline: 'Questions, challenges, unexpected moments.', prompt: 'TRUTH OR DARE', color: '#ded3f3', price: 499, stock: 0, available: false },
+  { id: 'bb', name: 'Bestie Bucketlist', category: 'Bestie Bucketlist', description: 'A collection of activities and memories to make with your favourite people.', tagline: 'One Pinky Promise at a Time.', prompt: 'ONE PINKY PROMISE AT A TIME', color: '#f8d8e4', price: 499, stock: 0, available: false }
 ];
 const initialSettings = { shippingFeePaise: null, freeShippingThresholdPaise: null, taxRatePercent: null, country: 'IN', contactEmail: '', policiesReviewed: false };
 await mkdir(dataRoot, { recursive: true });
@@ -166,3 +166,4 @@ const server = createServer(async (req, res) => {
   } catch (error) { console.error('Request error:', error.message); return json(res, error.status || 500, { error: error.status ? error.message : 'The request could not be completed.' }); }
 });
 server.listen(port, () => console.log(`Decked Out store listening on http://localhost:${port}`));
+

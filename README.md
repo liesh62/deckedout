@@ -9,7 +9,7 @@ Requires Node.js 20 or newer. There are no package dependencies.
 1. Copy `.env.example` to `.env` and set a strong, unique `ADMIN_TOKEN`.
 2. Start the server with the environment variables loaded: `node --env-file=.env server.mjs`.
 3. Open `http://localhost:4173`.
-4. Choose **store owner setup** from checkout, enter the admin token, and configure confirmed prices, stock, shipping, tax, contact email, and policy review.
+4. Choose **store owner setup** from checkout, enter the admin token, and configure stock, shipping, tax, contact email, and policy review. Each individual set is priced at ₹499 by default.
 
 On Windows PowerShell, for a local session:
 
@@ -25,7 +25,7 @@ The app creates JSON data files on first run. `data/*.json` is intentionally exc
 1. Create and verify the merchant's Razorpay account, then use test-mode credentials first.
 2. Set `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET`, and a separate `RAZORPAY_WEBHOOK_SECRET` as server environment variables.
 3. Configure a webhook URL ending in `/api/payment/webhook` and subscribe to `payment.captured` and `order.paid`.
-4. Set shipping, tax, product prices and stock in the admin dashboard. Complete the actual policies, then mark policy review in settings.
+4. Set shipping, tax, and stock in the admin dashboard. Each individual set is priced at ₹499 by default. Complete the actual policies, then mark policy review in settings.
 5. Test success, cancellation, failure, inventory edge cases, and webhook delivery using test credentials. Switch to live credentials only after the merchant account and required business/policy details are approved.
 
 The server creates Razorpay orders using server-computed amounts, verifies the checkout signature, and never receives card numbers or UPI PINs. Payment credentials are not included in the browser bundle. Razorpay transaction and payment pricing depends on the merchant's current account terms; verify the applicable charges in the Razorpay dashboard. There are no paid software dependencies in this project.
@@ -46,7 +46,7 @@ The project files are in the GitHub repository, but the site has **not been depl
 
 Before accepting real orders, the owner still needs to provide or configure:
 
-- Actual prices, inventory, packaging/card-count details, and approved product descriptions.
+- Stock quantities, packaging/card-count details, and approved product descriptions. Each individual set is priced at ₹499 by default.
 - Confirm product prices, inventory, packaging, and shipping details for all three games.
 - Merchant identity, Razorpay account approval and credentials, shipping regions/rates, applicable tax rules, and completed legal policies.
 - A domain and a persistent, backed-up database. This JSON-file backend is a single-instance starter, not a production database.

@@ -1,6 +1,6 @@
 # Decked Out store
 
-A responsive storefront and Node.js backend built around the supplied Never Have I Ever card designs. The two source card sheets in `public/assets/` are rendered from pages 1 and 2 of the supplied PDF. Truth or Dare and Bestie Bucketlist artwork was not included in that PDF; their on-site visuals are clearly marked as illustrative placeholders until the owner supplies the actual designs.
+A responsive storefront and Node.js backend featuring all three supplied games: Never Have I Ever, Truth or Dare, and Bestie Bucketlist. Sample sheets for all three decks are rendered from the supplied PDF and included in `public/assets/`.
 
 ## Run locally
 
@@ -42,12 +42,12 @@ Public API routes include `GET /api/products`, `GET /api/public-config`, `POST /
 
 ## Launch requirements and current limits
 
-This workspace does not have an attached GitHub repository or hosting account, so the site has **not been deployed** and no public URL exists yet. Deployment requires a repository and a Node-capable host with persistent storage; GitHub Pages alone cannot run this backend.
+The project files are in the GitHub repository, but the site has **not been deployed** and no public URL exists yet. Deployment requires a Node-capable host with persistent storage; GitHub Pages alone cannot run this backend.
 
 Before accepting real orders, the owner still needs to provide or configure:
 
 - Actual prices, inventory, packaging/card-count details, and approved product descriptions.
-- Actual Truth or Dare and Bestie Bucketlist card artwork and prompts.
+- Confirm product prices, inventory, packaging, and shipping details for all three games.
 - Merchant identity, Razorpay account approval and credentials, shipping regions/rates, applicable tax rules, and completed legal policies.
 - A domain and a persistent, backed-up database. This JSON-file backend is a single-instance starter, not a production database.
 - A transactional email service, if order emails are required.

@@ -1,6 +1,6 @@
 # Decked Out store
 
-A responsive storefront and Node.js backend featuring all three supplied games: Never Have I Ever, Truth or Dare, and Bestie Bucketlist. Sample sheets for all three decks are rendered from the supplied PDF and included in `public/assets/`.
+A responsive storefront and Node.js backend featuring all three supplied games: Never Have I Ever, Truth or Dare, and Bestie Bucketlist. A single sample card from each game is rendered from the supplied PDF and included in `public/assets/`; the complete card sheets are not published.
 
 ## Run locally
 
